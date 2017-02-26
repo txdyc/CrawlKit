@@ -1,17 +1,17 @@
 # coding:utf-8
 
 import MySQLdb
-from config.database import *
+from config import database
 
 
 class DbHelper:
     def __init__(self):
-        self.host = HOST
-        self.port = PORT
-        self.user = USER
-        self.passwd = PASSWORD
-        self.db = DATABASE
-        self.charset = CHARSET
+        self.host = database.HOST
+        self.port = database.PORT
+        self.user = database.USER
+        self.passwd = database.PASSWORD
+        self.db = database.DATABASE
+        self.charset = database.CHARSET
         self.connection = None
 
     def conn(self):
